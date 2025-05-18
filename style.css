@@ -1,0 +1,275 @@
+/* Base Styles */
+:root {
+  --primary: #4361ee;
+  --primary-dark: #3a56d5;
+  --secondary: #3f37c9;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --gray: #6c757d;
+  --danger: #dc3545;
+  --success: #28a745;
+  --warning: #fd7e14;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Login Container */
+.login-container {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.login-card {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.illustration {
+  flex: 1;
+  background: linear-gradient(to right, #4361ee, #3f37c9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.illustration img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Logo */
+.logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo i {
+  font-size: 50px;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+/* Form Elements */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: var(--gray);
+}
+
+.input-group .toggle-password {
+  left: auto;
+  right: 15px;
+  cursor: pointer;
+  color: var(--gray);
+}
+
+.input-group .toggle-password:hover {
+  color: var(--dark);
+}
+
+input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+}
+
+/* Options */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  color: var(--gray);
+  cursor: pointer;
+}
+
+.options input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+.forgot-password {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.forgot-password:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Login Button */
+.login-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.login-btn i {
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
+
+.login-btn:hover {
+  background: var(--primary-dark);
+}
+
+.login-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Divider */
+.divider {
+  position: relative;
+  margin: 25px 0;
+  text-align: center;
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e0e0e0;
+  z-index: 1;
+}
+
+.divider span {
+  position: relative;
+  z-index: 2;
+  background: white;
+  padding: 0 15px;
+}
+
+/* Social Login */
+.social-login {
+  margin-bottom: 25px;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.google-btn i {
+  color: var(--danger);
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.google-btn:hover {
+  background: #f8f9fa;
+  border-color: #d0d0d0;
+}
+
+/* Register Link */
+.register-link {
+  text-align: center;
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.register-link a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.register-link a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+  
+  .illustration {
+    display: none;
+  }
+  
+  .login-card {
+    padding: 30px;
+  }
+}
